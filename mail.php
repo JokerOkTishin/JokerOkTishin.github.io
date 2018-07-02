@@ -5,7 +5,7 @@ $username=$_POST['user_name'];
 $userphone=$_POST['user_phone'];
 
 //Тут указываем на какой ящик посылать письмо
-$to = "79991570874@yandex.ru";
+$to = "jokertrade1@gmail.com";
 //Далее идет тема и само сообщение
 // Тема письма
 $subject = "Запрос на консультацию";
