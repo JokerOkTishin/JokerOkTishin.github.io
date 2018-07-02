@@ -164,7 +164,7 @@
 		   			<div class="col-md-6">
 		   				<div class="main_form">
 			              <p class="main_form_header">Заказать Бесплатную<br>Юридическую консультацию</p>
-			              <form id="main_form-ajax" action="#" method="POST">
+			              <form id="main_form-ajax" action="mail.php" method="POST">
 			              	<input type="hidden" name="whatever" value="Главная форма">
 			                <input type="text" name="user_name" placeholder="Введите имя">
 			                <input type="text" name="user_phone" id="phone" required placeholder="Введите телефон">			         
@@ -392,7 +392,7 @@
 			data: $(this).serialize()
 		}).done(function() {
 			$(this).find("input").val("");
-			$('#modal_thanks').modal('show');
+			alert("Спасибо за заявку! Скоро мы с вами свяжемся.");
 			$("#main_form-ajax").trigger("reset");
 		});
 		return false;
