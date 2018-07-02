@@ -8,7 +8,7 @@ $userphone=$_POST['user_phone'];
 $to = "jokertrade1@gmail.com";
 //Далее идет тема и само сообщение
 // Тема письма
-$subject = "Запрос консультации";
+$subject = "Запрос";
 // Сообщение письма
 $message = "
 Тип формы: ".htmlspecialchars($whatever)."<br />
