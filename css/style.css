@@ -411,11 +411,11 @@ section#footer {
   }
   .main_form input {
     width: 90%;
-    margin-top: 15px;
+    margin-top: 10px;
   }
   .main_form .main_btn {
-    margin-top: 20px;
-    width: 90%;
+    margin-top: 10px;
+    width: 70%;
   }
   .main_form p {
     font-family: 'Open Sans', sans-serif;
@@ -577,11 +577,11 @@ section#footer {
   }
   .main_form input {
     width: 90%;
-    margin-top: 15px;
+    margin-top: 10px;
   }
   .main_form .main_btn {
-    margin-top: 20px;
-    width: 90%;
+    margin-top: 10px;
+    width: 60%;
   }
   .main_form p {
     font-family: 'Open Sans', sans-serif;
@@ -674,6 +674,8 @@ section#footer {
   }
   .box_services {
     width: 290px;
+    height: 250px;
+    margin-left: 27px;
   }
   section#main_nav {
     margin-top: 30px;
@@ -743,11 +745,11 @@ section#footer {
   }
   .main_form input {
     width: 90%;
-    margin-top: 15px;
+    margin-top: 10px;
   }
   .main_form .main_btn {
-    margin-top: 20px;
-    width: 90%;
+    margin-top: 10px;
+    width: 50%;
   }
   .main_form p {
     font-family: 'Open Sans', sans-serif;
@@ -840,6 +842,8 @@ section#footer {
   }
   .box_services {
     width: 290px;
+    height: 270px;
+    margin-left: 50px;
   }
   section#main_nav {
     margin-top: 30px;
@@ -934,6 +938,26 @@ section#footer {
     font-size: 12px;
     margin-left: 80px;
   }
+  .feedback_head {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .feedback_head h2 {
+    font-size: 27px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+  }
+  .card {
+    border-radius: 10px;
+    border: 1px solid #181819;
+    margin-bottom: 10px;
+    background-color: #eebc24;
+    text-align: center;
+  }
+  .guaarant_item {
+    text-align: center;
+    padding-left: 0px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .logo_text span {
@@ -989,6 +1013,26 @@ section#footer {
   section#footer {
     height: 200px;
   }
+  .feedback_head {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .feedback_head h2 {
+    font-size: 27px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+  }
+  .card {
+    border-radius: 10px;
+    border: 1px solid #181819;
+    margin-bottom: 10px;
+    background-color: #eebc24;
+    text-align: center;
+  }
+  .guaarant_item {
+    text-align: center;
+    padding-left: 0px;
+  }
 }
 @media (min-width: 1200px) {
   .social_link .fa-odnoklassniki,
@@ -1019,5 +1063,25 @@ section#footer {
   .logo_text {
     margin-top: 10px;
     margin-left: -20px;
+  }
+  .feedback_head {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .feedback_head h2 {
+    font-size: 27px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+  }
+  .card {
+    border-radius: 10px;
+    border: 1px solid #181819;
+    margin-bottom: 10px;
+    background-color: #eebc24;
+    text-align: center;
+  }
+  .guaarant_item {
+    text-align: center;
+    padding-left: 0px;
   }
 }
