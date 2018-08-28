@@ -1,0 +1,156 @@
+/* base color */
+/* base setting */
+html {
+  font-size: 10px;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.open_reg {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+.open_bold {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+.button {
+  background-color: #fe7f0f;
+  color: #ffffff;
+  padding: 1rem 1rem;
+  border-radius: 6px;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+a:hover {
+  text-decoration: none;
+  /* Отменяем подчеркивание у ссылки */
+}
+/* Typografy */
+section {
+  padding: 10rem 0;
+}
+/* main */
+main {
+  padding: 1rem 0;
+}
+.main_menu {
+  padding: 1rem 0;
+}
+.main_menu a::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid #f6dfab;
+  content: '';
+  transform: scaleX(0);
+  opacity: 0;
+  transition: all .3s linear;
+}
+.main_menu a:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+.menu_item {
+  padding: 0.3rem 1.5rem;
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #ffffff;
+  position: relative;
+}
+.menu_item:hover {
+  color: #f6dfab;
+}
+.logo_text {
+  display: block;
+  font-size: 3rem;
+  color: #f6dfab;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.logo_cit {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.logo_img {
+  margin-top: 0.5rem;
+}
+.main_wrap {
+  height: 9rem;
+}
+.phone_link {
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #ffffff;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 9rem;
+  line-height: 9rem;
+}
+.main_content {
+  background-color: rgba(189, 103, 37, 0.8);
+}
+.main {
+  background: #000000 url(../img/maingb.jpg) no-repeat;
+}
+.wrap {
+  display: table;
+  width: 100%;
+  height: 9rem;
+}
+.wrap_block {
+  display: table-cell;
+  vertical-align: middle;
+}
+.main_img1 {
+  display: inline-block;
+  position: absolute;
+  margin-top: 20rem;
+  margin-left: 30rem;
+}
+.main_img2 {
+  display: inline-block;
+  margin-left: 95rem;
+  margin-top: 10rem;
+  padding-bottom: 15rem;
+  position: relative;
+}
+.main_block {
+  position: absolute;
+  z-index: 3;
+}
+.main_header {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 6rem;
+  color: #ffffff;
+  margin-top: 13rem;
+}
+.main_text {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: #ffffff;
+  margin-top: 17rem;
+}
+.main_btn {
+  margin-top: 3rem;
+}

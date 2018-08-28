@@ -1,0 +1,161 @@
+/* base color */
+@button: #fe7f0f;
+@hovermenu: #f6dfab;
+@presentbg: #bd6725;
+@mainplank: rgba(189,103,37,0.8);
+@light: #fff;
+@text: #000;
+@gallarybg: #3a3948;
+@formbg: #fcd270;
+
+/* base setting */
+html {
+	font-size: 10px;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+.open_reg {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+} 
+
+.open_bold {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+}
+.button {
+	background-color: @button;
+	color: @light;
+	padding: 1rem 1rem;
+	border-radius: 6px;
+	border: none;
+	.open_bold;
+	font-size: 1.5rem;
+}
+a:hover { 
+    text-decoration: none; /* Отменяем подчеркивание у ссылки */
+   } 
+/* Typografy */
+section {
+	padding: 10rem 0;
+}
+
+/* main */
+main {
+	padding: 1rem 0;
+}
+.main_menu {
+	padding: 1rem 0;
+	a::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-bottom: 1px solid @hovermenu;
+    content: '';
+    transform: scaleX(0);
+    opacity: 0;
+    transition: all .3s linear;
+}
+		a:hover::after {
+		    transform: scaleX(1);
+		    opacity: 1;
+}
+}
+.menu_item {
+	padding: 0.3rem 1.5rem;
+	font-size: 1.5rem;
+	.open_bold;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	color: @light;
+	position: relative;
+	&:hover {
+		color: @hovermenu;
+	}	
+}
+.logo_text {
+	display: block;
+	font-size: 3rem;
+	color: @hovermenu;
+	.open_bold;
+	margin-top: 1rem;
+}
+.logo_cit {
+	.open_reg;
+	font-size: 1.5rem;
+	color: @light;
+}
+.logo_img {
+	margin-top: 0.5rem;
+}
+.main_wrap {
+	height: 9rem;
+}
+.phone_link {
+	display: inline-block;
+	.open_bold;
+	font-size: 2rem;
+	color: @light;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 9rem;
+	line-height: 9rem;
+}
+.main_content {
+	background-color: @mainplank;
+}
+.main {
+	background: #000 url(../img/maingb.jpg) no-repeat;
+}
+.wrap {
+	display: table;
+	width: 100%;
+	height: 9rem;
+	&_block {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+.main_img1 {
+	display: inline-block;
+	position: absolute;
+	margin-top: 20rem;
+	margin-left: 30rem;
+}
+.main_img2 {
+	display: inline-block;
+	margin-left: 95rem;
+	margin-top: 10rem;
+	padding-bottom: 15rem;
+	position: relative;
+}
+.main {
+   &_block {
+   	position: absolute;
+   	z-index: 3;
+   }
+	&_header {
+		.open_bold;
+		font-size: 6rem;
+		color: @light;
+		margin-top: 13rem;
+	}
+	&_text {
+		.open_reg;
+		font-size: 2.4rem;
+		color: @light;
+		margin-top: 17rem;
+	}
+	&_btn {
+		margin-top: 3rem;
+	}
+}
