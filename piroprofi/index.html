@@ -32,8 +32,21 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-12">
+                    <div class="togm">
+                        <svg class="ham hamRotate ham4" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+                          <path
+                                class="line top"
+                                d="m 70,33 h -40 c 0,0 -8.5,-0.149796 -8.5,8.5 0,8.649796 8.5,8.5 8.5,8.5 h 20 v -20" />
+                          <path
+                                class="line middle"
+                                d="m 70,50 h -40" />
+                          <path
+                                class="line bottom"
+                                d="m 30,67 h 40 c 0,0 8.5,0.149796 8.5,-8.5 0,-8.649796 -8.5,-8.5 -8.5,-8.5 h -20 v 20" />
+                        </svg>
+                    </div>
                     <div class="header">
-                        <div class="main_menu">
+                        <div id="hide" class="main_menu">
                             <a class="menu_item" href="#">Главная</a>
                             <a class="menu_item" href="#">Наши работы</a>
                             <a class="menu_item" href="#">Акция</a>
@@ -47,19 +60,19 @@
     <div class="main_content">
     <div class="container">        
                     <div class="row main_wrap">
-                        <div class="col-md-1">
+                        <div class="col-lg-1 col-md-2 col-6">
                             <div class="logo_img">
                                 <a href="#"><img src="img/logo.png" alt=""></a>
                             </div>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-lg-3 col-md-6 col-6">
                             <strong class="logo_text">Пиропрофи</strong>
                             <p class="logo_cit">Портреты на заказ</p>
                         </div>
-                        <div class="col-md-3 offset-md-4">
+                        <div class="col-lg-3 col-md-4 col-6 offset-lg-2 offset-xl-3">
                             <a class="phone_link float-right" href="#">+7(902)406-26-25</a>
                         </div>
-                        <div class="col-md-2">
+                        <div class="col-xl-2 col-lg-3 col-md-12 col-6">
                             <div class="wrap">
                                 <div class="wrap_block">                                   
                                 <a class="button float-right" href="#">Обратный звонок</a>                               
@@ -82,7 +95,7 @@
                     <p class="main_text">Портрет, выжженный на дереве - это оригинальный, необычный подарок
                     <br>к любому событию, который приятно удивит и порадует ваших близких</p>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-12 col-sm-12">
                     <div class="main_btn">
                         <a class="button" href="#">Хочу портрет</a>
                     </div>
@@ -98,6 +111,66 @@
         </div>
     </div>
     </main>
+    <section id="work">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <div class="work_wrap">
+                        <img src="img/workfoto.png" alt="Наши работы">
+                        <a class="many_foto" href="#"><img src="img/many_foto.png" alt="Больше фото"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="step">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <h2 class="step_header">Три шага к идеальному подарку</h2>
+                </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="box_step">
+                            <strong>1</strong>
+                            <div class="wrap_step">
+                                <img src="img/support.svg" alt="">
+                                <p>Оставляете заявку или связыветесь с нами сами.
+                                    Высылаете изображение.
+                                    Обговариваем детали.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="box_step">
+                            <strong>2</strong>
+                            <div class="wrap_step">
+                                <img src="img/pay.svg" alt="">
+                                <p>Мы изготавливаем картину. Высылаем Вам фото и видео готового изделия.
+                                Если Вас все устраивает, оплачиваете работу.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12">
+                        <div class="box_step">
+                            <strong>3</strong>
+                            <div class="wrap_step">
+                                <img src="img/delivery.png" alt="">
+                                <p>Мы доставляем заказ точно в срок. 
+                                   Вам остаётся только преподнести подарок!</p>
+                            </div>
+                        </div>
+                    </div>               
+            </div>
+        </div>
+    </section>
+
+    
+
+
+
+    
+
 
 
 
@@ -112,5 +185,10 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+  $('.ham').on('click', function(){
+  $('.main_menu').toggleClass('open');
+});
+    </script>
   </body>
 </html>
