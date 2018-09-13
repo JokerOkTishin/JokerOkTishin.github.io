@@ -22,6 +22,10 @@ h2 {
 	color: @light;
 	.open_bold;
 }
+input, button, textarea {
+	outline: none;
+	border: none;
+}
 .open_reg {
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
@@ -175,6 +179,15 @@ bottom: 0;
 right: 0;
 margin-bottom: 3.6rem;
 margin-right: 4.4rem;
+--webkit-transition: all 0.4s;
+-o-transition: all 0.4s;
+transition: all 0.4s;
+&:hover {
+	--webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+}
 }
 
 /* section step */
@@ -216,7 +229,7 @@ margin-right: 4.4rem;
 }
 
 
-
+/* menu toggle */
 .ham {
   display: none;
   cursor: pointer;
@@ -268,11 +281,316 @@ margin-right: 4.4rem;
   transition: all .5s ease;
 }
 
+/* section stock */
 
+section#stock {
+	background: #fff url(../img/stockbg.jpg) no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
 
+.stock_header {
+	text-align: center;
+	margin-bottom: 3rem;
+}
+.prize {
+	font-size: 3rem;
+	color: @light;
+	.open_bold;
+}
+.list {
+	list-style-type: none;
+	font-size: 2rem;
+	color: @light;
+	.open_reg;
+	margin-right: 3rem;
+}
+.stock_text {
+	margin-top: 8rem;
+	padding-left: 12rem;
+	ul {
+		margin-bottom: -1rem;
+		li {
+			margin-bottom: 1rem;
+		}
+	}
+}
 
+.main_form {
+	padding: 3rem 5rem;
+	display: block;
+	margin: 0 auto;
+	width: 35rem;
+	height: 42rem;
+	background-color: @formbg;
+	border-radius: 0.5rem;
+	label {
+		font-size: 2rem;
+		color: @text;
+		.open_bold;
+		padding-left: 1rem;
+	}
+	input {
+		display: block;
+		width: 100%;
+		padding: 1rem;
+		margin-bottom: 2rem;
+		border-radius: 0.5rem;
+		height: 4rem;
+		font-size: 1.2rem;
+	}
+	input::-moz-placeholder {
+		color: red;
+	}
+	input::-webkit-input-placeholder {
+		color: red;
+	}
+	button {
+		display: block;
+		margin: 0 auto;
+		cursor: pointer;
+		&:hover {
+			background-color: darken(@button, 12%);
+		}
+	}
+	.lock {
+		float: left;
+		width: 2.5rem;
+		height: 2.5rem;
+		margin-right: 1rem;
+		margin-top: 1.4rem;
+	}
+	.garant_text {
+		.open_reg;
+		font-size: 1.1rem;
+		margin-top: 1rem;
+	}
+}
+.pin_img {
+	width: 4%;
+	height: 4%;
+	margin-right: 1rem;
+}
 
+/* section shop */
 
+.shop_header {
+	color: @text;
+}
+.shop_text {
+	color: @text;
+	font-size: 2rem;
+	.open_reg;
+	margin-bottom: 3rem;
+}
+.box_shop {
+	width: 26rem;
+	height: 50rem;
+	border: 1px rgb(161, 161, 161) solid;
+	padding: 0;
+	display: block;
+	margin: 0 auto;
+	margin-top: 2rem;
+	&:hover {
+		box-shadow: 0px 3px 12.48px 0.52px rgba(0, 1, 5, 0.53);
+	}
+	button {
+	display: block;
+	margin: 0 auto;
+	margin-top: 4rem;
+	cursor: pointer;
+	&:hover {
+		background-color: darken(@button, 12%);
+	}
+}
+}
+.shop_img {
+	display: block;
+	margin: 0 auto;
+	margin-top: 2rem;
+	margin-bottom: 4rem;
+}
+.shop_box_text {
+	text-align: center;
+	.open_reg;
+	font-size: 2rem;
+	margin-bottom: 4.5rem;
+}
+.shop_price {
+	text-align: center;
+	display: block;
+	font-size: 2.3rem;
+}
+.shop_text_zakaz {
+	text-align: center;
+	.open_reg;
+	font-size: 2rem;
+	margin-bottom: 12rem;
+}
+
+/* section contacts */
+#contacts {
+	background: #fff url(../img/contactsbg.jpg) no-repeat center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 43rem;
+	padding-bottom: 0;
+}
+
+.icon_contacts {
+	width: 4%;
+	height: 4%;
+	text-align: left;
+	margin-right: 1rem;
+	margin-bottom: 0.6rem;
+}
+.icon_social_vk {
+	display: inline-block;
+	width: 9%;
+	height: 9%;
+	margin-top: 1rem;
+	margin-left: 6rem;
+}
+.icon_social_inst {
+	display: inline-block;
+	width: 9%;
+	height: 9%;
+	margin-top: 1rem;
+	margin-left: 1rem;
+}
+.text_contacts {
+	.open_bold;
+	color: @light;
+	font-size: 1.5rem;
+}
+.contact_header {
+	padding: 0;
+	margin-bottom: 6rem;
+}
+.futter_head_wrap {
+	margin-left: 17rem;
+}
+.form_header {
+	position: absolute;
+	.open_bold;
+	font-size: 2.2rem;
+	color: @light;
+	margin-top: -4rem
+}
+.futter_form {
+	display: block;
+	width: 37rem;
+	height: 28rem;
+	margin-top: 6rem;
+	input {
+		width: 100%;
+		height: 4rem;
+		margin-bottom: 0.8rem;
+		background: transparent;
+		border: 1px darken(@light, 30%) solid;
+		padding: 1rem;
+		color: @light;
+		font-size: 1.4rem;
+		.open_reg;
+	}
+	textarea {
+		width: 100%;
+		height: 10rem;
+		margin-bottom: 0.5rem;
+		background: transparent;
+		border: 1px darken(@light, 30%) solid;
+		padding: 1rem;
+		color: @light;
+		font-size: 1.4rem;
+		.open_reg;
+	}
+	input::-moz-placeholder {
+		color: @light;
+		font-size: 1.4rem;
+		.open_reg;
+	}
+	input::-webkit-input-placeholder {
+		color: @light;
+		font-size: 1.4rem;
+		.open_reg;
+	}
+	textarea::-moz-placeholder {
+		color: @light;
+		font-size: 1.4rem;
+		.open_reg;
+	}
+	textarea::-webkit-input-placeholder {
+		color: @light;
+		font-size: 1.4rem;
+		.open_reg;
+	}
+	.checkbox input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 20px;
+  width: 2rem;
+}
+.checkbox__text {
+  position: relative;
+  padding: 0 0 0 4rem;
+  cursor: pointer;
+  color: @light;
+  font-size: 1.3rem;
+}
+.checkbox__text:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 2.5rem;
+  height: 2.3rem;
+  background: transparent;
+  transition: .2s;
+  border: 1px @light solid;
+  margin-top: 1.3rem;
+}
+.checkbox__text:after {
+  content: '';
+  position: absolute;
+  top: -0.2rem;
+  left: 0.2rem;
+  width: 1rem;
+  height: 1.9rem;
+  background: #FFF;
+  transition: .2s;
+  margin-top: 1.3rem;
+}
+.checkbox input:checked + .checkbox__text:before {
+  background: transparent;
+}
+.checkbox input:checked + .checkbox__text:after {
+  left: 1.3rem;
+  background: @button;
+}
+.checkbox input:focus + .checkbox__text:before {
+  
+}
+button {
+	width: 11rem;
+	padding: 0.5rem;
+	margin-left: 3.5rem;
+}
+}
+/* section footer */
+#footer {
+	background-color: @presentbg;
+}
+.footer_cit {
+	.open_bold;
+	font-size: 1.6rem;
+	color: @light;
+	margin-top: 1rem;
+	img {
+		margin-right: 1rem;
+		margin-bottom: 1.5rem;
+	}
+}
 
 // Экстрамалые девайсы («телефоны», < 576px)
 @media (max-width: 575.98px) {
@@ -331,10 +649,47 @@ margin-right: 4.4rem;
 		font-size: 1.6rem;
 	}
 }
+.phone_link {
+	font-size: 1.5rem;
 }
-
-// Малые девайсы («ландшафтные», < 768px)
-@media (max-width: 768.98px) {
+.button {
+	font-size: 1.2rem;
+}
+#contacts {
+	height: 75rem;
+}
+.contact_block {
+	text-align: center;
+}
+.futter_head_wrap {
+	margin-top: 3rem;
+}
+.icon_social_vk {
+	display: inline-block;
+	margin-left: 13rem;
+	width: 4rem;
+	height: 4rem;
+	margin-bottom: 4rem;
+}
+.icon_social_inst {
+	display: inline-block;
+	width: 4rem;
+	height: 4rem;
+	margin-bottom: 4rem;
+	margin-left: 3rem;
+}
+.form_header {
+	margin-left: 0;
+	font-size: 2rem;
+}
+.main_form {
+	width: 100%;
+	height: 100%;
+}
+.box_shop {
+	width: 100%;
+	height: 50rem;
+}
 .main_img1 {
 	margin-left: 0;
 }
@@ -355,6 +710,31 @@ margin-right: 4.4rem;
 }
 }
 
+// Малые девайсы («ландшафтные», < 768px)
+@media (min-width: 768px) {
+.main_img1 {
+	margin-left: 0;
+}
+.work_wrap {
+	display: none;
+}
+.main_header {
+	margin-top: 7rem;
+	font-size: 2.5rem;
+}
+.main_text {
+	font-size: 2rem;
+}
+.box_step {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+}
+.box_shop {
+	width: 22rem;
+}
+}
+
 // Средние девайсы («таблетки», < 992px) 
 @media (max-width: 991.98px) {
 .main_img2 {
@@ -362,7 +742,23 @@ margin-right: 4.4rem;
 	margin-left: 5rem;
 }
 
+.contact_header {
+	font-size: 2.5rem;
 }
+.icon_contacts {
+	width: 8%;
+}
+.icon_social_vk {
+	width: 14%;
+}
+.icon_social_inst {
+	width: 14%;
+}
+.form_header {
+	margin-left: -6rem;
+}
+}
+
 
 // Большие девайсы (большие десктопы, < 1200px)
 @media (max-width: 1199.98px) {
@@ -370,5 +766,7 @@ margin-right: 4.4rem;
 	visibility: hidden;
 	margin-left: 5rem;
 }
-
+.futter_head_wrap {
+	margin-left: 8.1rem;
+}
 }
