@@ -43,6 +43,10 @@ input, button, textarea {
 	border: none;
 	.open_bold;
 	font-size: 1.5rem;
+	cursor: pointer;
+	&:hover {
+		background-color: darken(@button, 12%);
+	}
 }
 a:hover { 
     text-decoration: none; /* Отменяем подчеркивание у ссылки */
@@ -122,6 +126,8 @@ main {
 }
 .main_content {
 	background-color: @mainplank;
+	position: relative;
+	z-index: 2;
 }
 .main {
 	background: #000 url(../img/maingb.jpg) no-repeat;
@@ -148,6 +154,11 @@ main {
 	padding-bottom: 15rem;
 	position: relative;
 }
+.main_img3 {
+	position: absolute;
+	margin-left: 45rem;
+	margin-top: -10rem;
+}
 .main {
    &_block {
    	position: absolute;
@@ -155,18 +166,18 @@ main {
    }
 	&_header {
 		.open_bold;
-		font-size: 6rem;
+		font-size: 4.5rem;
 		color: @light;
-		margin-top: 13rem;
+		margin-top: 19rem;
 	}
 	&_text {
 		.open_reg;
 		font-size: 2.4rem;
 		color: @light;
-		margin-top: 17rem;
+		margin-top: 2rem;
 	}
 	&_btn {
-		margin-top: 3rem;
+		margin-top: 20rem;
 	}
 }
 /* section work */
@@ -193,23 +204,23 @@ transition: all 0.4s;
 /* section step */
 
 #step {
-	background-color: @presentbg;
+	
 }
 
 .box_step {
 	width: 30rem;
 	height: 17rem;
-	background-color: @light;
+	background-color: #3a3948;
 	box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.8);
 	p {
 		.open_reg;
-		color: @text;
+		color: @light;
 		font-size: 1.2rem;
 	}
 	strong {
 		.open_reg;
 		font-size: 4rem;
-		color: @text;
+		color: @light;
 	}
 }
 .wrap_step {
@@ -225,6 +236,7 @@ transition: all 0.4s;
 	}
 }
 .step_header {
+	color: @text;
 	margin-bottom: 2rem;
 }
 
@@ -284,6 +296,7 @@ transition: all 0.4s;
 /* section stock */
 
 section#stock {
+	
 	background: #fff url(../img/stockbg.jpg) no-repeat;
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -592,6 +605,27 @@ button {
 	}
 }
 
+/* section video */
+section#video {
+	background-color: @presentbg;
+}
+.block{
+  height: 80vh;
+  font-size: 60px;
+  text-align: center;
+  display: flex;
+}
+.block > *{
+  margin: auto;
+  display: inline-block;
+}
+.video_head {
+	font-size: 3.5rem;
+	.open_bold;
+	color: @light;
+	text-align: center;
+}
+
 // Экстрамалые девайсы («телефоны», < 576px)
 @media (max-width: 575.98px) {
 .main_menu {
@@ -679,8 +713,12 @@ button {
 	margin-left: 3rem;
 }
 .form_header {
-	margin-left: 0;
-	font-size: 2rem;
+	margin-left: -15.8rem;
+	font-size: 1.5rem;
+}
+.futter_form {
+	margin-top: 2rem;
+	margin-right: 1.3rem;
 }
 .main_form {
 	width: 100%;
@@ -708,22 +746,42 @@ button {
 	margin: 0 auto;
 	margin-bottom: 2rem;
 }
+.main_img2 {
+	visibility: hidden;
+	margin-left: -26rem;
+}
+.main_img3 {
+	visibility: hidden;
+	margin-left: -26rem;
+}
+.stock_header {
+	margin-bottom: 3rem;
+	padding: 0;
+}
+.stock_text {
+	margin: 0;
+	margin-bottom: 5rem;
+	.prize {
+		font-size: 2.5rem;
+		font-style: italic;
+	}
+}
 }
 
 // Малые девайсы («ландшафтные», < 768px)
-@media (min-width: 768px) {
+@media (min-width: 576px) and (max-width: 767.99px) {
 .main_img1 {
-	margin-left: 0;
+	margin-left: 14rem;
 }
 .work_wrap {
 	display: none;
 }
 .main_header {
-	margin-top: 7rem;
-	font-size: 2.5rem;
+	margin-top: 16rem;
+	font-size: 3.5rem;
 }
 .main_text {
-	font-size: 2rem;
+	font-size: 1.9rem;
 }
 .box_step {
 	display: block;
@@ -733,11 +791,31 @@ button {
 .box_shop {
 	width: 22rem;
 }
+.work_wrap {
+	display: none;
+}
+.main_img2, .main_img3 {
+	visibility: hidden;
+	margin-left: 5rem;
+}
+.stock_header {
+	margin-bottom: 1rem;
+	padding: 0;
+}
+.stock_text {
+	margin: 0;
+	margin-bottom: 3rem;
+	margin-left: 6rem;
+	.prize {
+		font-size: 2.5rem;
+		font-style: italic;
+	}
+}
 }
 
 // Средние девайсы («таблетки», < 992px) 
-@media (max-width: 991.98px) {
-.main_img2 {
+@media (min-width: 768px) and (max-width: 991.98px) {
+.main_img2, .main_img3 {
 	visibility: hidden;
 	margin-left: 5rem;
 }
@@ -761,7 +839,7 @@ button {
 
 
 // Большие девайсы (большие десктопы, < 1200px)
-@media (max-width: 1199.98px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
 .main_img2 {
 	visibility: hidden;
 	margin-left: 5rem;
@@ -769,4 +847,11 @@ button {
 .futter_head_wrap {
 	margin-left: 8.1rem;
 }
+.box_shop {
+	width: 22rem;
+}
+}
+
+@media (min-width: 1200px) {
+
 }

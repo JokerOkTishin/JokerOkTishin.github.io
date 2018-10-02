@@ -103,12 +103,16 @@
             </div>
         </div>
     </div>
+    <div class="main_img3">
+            <img src="img/main3.png" alt="Портрет3">
+        </div>
         <div class="main_img1">
-            <img src="img/main1.png" alt="">
+            <img src="img/main1.png" alt="Портрет1">
         </div>
         <div class="main_img2">
-            <img src="img/main2.png" alt="">
+            <img src="img/main2.png" alt="Портрет2">
         </div>
+        
     </div>
     </main>
     <section id="work">
@@ -123,7 +127,19 @@
             </div>
         </div>
     </section>
+<section id="video"> 
 
+   <div class="block video-block">
+  <video class="video" loop="loop" width="1024" controls="controls">
+      <source src="http://denis-creative.com/wp-content/uploads/2018/01/video.mp4" type="video/mp4" /> 
+      <source src="http://denis-creative.com/wp-content/uploads/2018/01/video.ogv" type="video/ogv" /> 
+      <source src="http://denis-creative.com/wp-content/uploads/2018/01/video.webm" type="video/webm" /> 
+    </video>
+</div>
+</section>
+
+
+<!-- secton step -->
     <section id="step">
         <div class="container">
             <div class="row text-center">
@@ -171,7 +187,7 @@
                 <div class="col-lg-12">
                     <h2 class="stock_header">Акция!</h2>
                 </div>
-                <div class="col-lg-6">
+                <div class="col-sm-12 col-lg-6">
                         <div class="stock_text">
                             <strong class="prize">Дарим:</strong>
                             <ul>
@@ -183,7 +199,7 @@
                             <strong class="prize">за Ваш отзыв</strong>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <div class="col-sm-12 col-lg-6">
                         <div class="main_form">
                             <form action="#">
                                 <label for="name">Ваше имя:</label>  
@@ -385,6 +401,30 @@
     <script>
   $('.ham').on('click', function(){
   $('.main_menu').toggleClass('open');
+});
+    </script>
+    <script>
+        $(function() {
+  
+  var $video = $('.video');
+  var $window = $(window);
+
+  $window.scroll(function() {
+
+    var $topOfVideo = $video.offset().top;
+    var $bottomOfVideo = $video.offset().top + $video.outerHeight();
+
+    var $topOfScreen = $window.scrollTop();
+    var $bottomOfScreen = $window.scrollTop() + $window.innerHeight();
+    
+    if(($bottomOfScreen > $bottomOfVideo) && ($topOfScreen < $topOfVideo)){
+      $video[0].play();
+    } else {
+      $video[0].pause();
+    }
+    
+  });
+  
 });
     </script>
   </body>

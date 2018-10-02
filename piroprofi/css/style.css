@@ -37,6 +37,10 @@ textarea {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   font-size: 1.5rem;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #cf6101;
 }
 a:hover {
   text-decoration: none;
@@ -120,6 +124,8 @@ main {
 }
 .main_content {
   background-color: rgba(189, 103, 37, 0.8);
+  position: relative;
+  z-index: 2;
 }
 .main {
   background: #000000 url(../img/maingb.jpg) no-repeat;
@@ -146,6 +152,11 @@ main {
   padding-bottom: 15rem;
   position: relative;
 }
+.main_img3 {
+  position: absolute;
+  margin-left: 45rem;
+  margin-top: -10rem;
+}
 .main_block {
   position: absolute;
   z-index: 3;
@@ -153,19 +164,19 @@ main {
 .main_header {
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
-  font-size: 6rem;
+  font-size: 4.5rem;
   color: #ffffff;
-  margin-top: 13rem;
+  margin-top: 19rem;
 }
 .main_text {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 2.4rem;
   color: #ffffff;
-  margin-top: 17rem;
+  margin-top: 2rem;
 }
 .main_btn {
-  margin-top: 3rem;
+  margin-top: 20rem;
 }
 /* section work */
 .work_wrap {
@@ -188,26 +199,23 @@ main {
   transform: scale(1.2);
 }
 /* section step */
-#step {
-  background-color: #bd6725;
-}
 .box_step {
   width: 30rem;
   height: 17rem;
-  background-color: #ffffff;
+  background-color: #3a3948;
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.8);
 }
 .box_step p {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  color: #000000;
+  color: #ffffff;
   font-size: 1.2rem;
 }
 .box_step strong {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 4rem;
-  color: #000000;
+  color: #ffffff;
 }
 .wrap_step {
   display: flex;
@@ -222,6 +230,7 @@ main {
   padding: 0 1rem;
 }
 .step_header {
+  color: #000000;
   margin-bottom: 2rem;
 }
 /* menu toggle */
@@ -586,6 +595,27 @@ section#stock {
   margin-right: 1rem;
   margin-bottom: 1.5rem;
 }
+/* section video */
+section#video {
+  background-color: #bd6725;
+}
+.block {
+  height: 80vh;
+  font-size: 60px;
+  text-align: center;
+  display: flex;
+}
+.block > * {
+  margin: auto;
+  display: inline-block;
+}
+.video_head {
+  font-size: 3.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
 @media (max-width: 575.98px) {
   .main_menu {
     position: relative;
@@ -668,8 +698,12 @@ section#stock {
     margin-left: 3rem;
   }
   .form_header {
-    margin-left: 0;
-    font-size: 2rem;
+    margin-left: -15.8rem;
+    font-size: 1.5rem;
+  }
+  .futter_form {
+    margin-top: 2rem;
+    margin-right: 1.3rem;
   }
   .main_form {
     width: 100%;
@@ -697,20 +731,40 @@ section#stock {
     margin: 0 auto;
     margin-bottom: 2rem;
   }
+  .main_img2 {
+    visibility: hidden;
+    margin-left: -26rem;
+  }
+  .main_img3 {
+    visibility: hidden;
+    margin-left: -26rem;
+  }
+  .stock_header {
+    margin-bottom: 3rem;
+    padding: 0;
+  }
+  .stock_text {
+    margin: 0;
+    margin-bottom: 5rem;
+  }
+  .stock_text .prize {
+    font-size: 2.5rem;
+    font-style: italic;
+  }
 }
-@media (min-width: 768px) {
+@media (min-width: 576px) and (max-width: 767.99px) {
   .main_img1 {
-    margin-left: 0;
+    margin-left: 14rem;
   }
   .work_wrap {
     display: none;
   }
   .main_header {
-    margin-top: 7rem;
-    font-size: 2.5rem;
+    margin-top: 16rem;
+    font-size: 3.5rem;
   }
   .main_text {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
   .box_step {
     display: block;
@@ -720,9 +774,31 @@ section#stock {
   .box_shop {
     width: 22rem;
   }
+  .work_wrap {
+    display: none;
+  }
+  .main_img2,
+  .main_img3 {
+    visibility: hidden;
+    margin-left: 5rem;
+  }
+  .stock_header {
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+  .stock_text {
+    margin: 0;
+    margin-bottom: 3rem;
+    margin-left: 6rem;
+  }
+  .stock_text .prize {
+    font-size: 2.5rem;
+    font-style: italic;
+  }
 }
-@media (max-width: 991.98px) {
-  .main_img2 {
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .main_img2,
+  .main_img3 {
     visibility: hidden;
     margin-left: 5rem;
   }
@@ -742,12 +818,15 @@ section#stock {
     margin-left: -6rem;
   }
 }
-@media (max-width: 1199.98px) {
+@media (min-width: 992px) and (max-width: 1199.98px) {
   .main_img2 {
     visibility: hidden;
     margin-left: 5rem;
   }
   .futter_head_wrap {
     margin-left: 8.1rem;
+  }
+  .box_shop {
+    width: 22rem;
   }
 }
