@@ -8,13 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="/favicon.ico">
     <!-- font -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i" rel="stylesheet">
     <!-- normalize -->
     <link rel="stylesheet" href="css/normalize.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- font-awesome CSS -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- slider slick -->
+    <link  href="slick/slick.css" rel="stylesheet">
+    <link  href="slick/slick-theme.css" rel="stylesheet">
+    <!-- fancybox gallary -->
+    <link rel="stylesheet" href="css/jquery.fancybox.css" />
     <!-- main CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -48,10 +53,10 @@
                     <div class="header">
                         <div id="hide" class="main_menu">
                             <a class="menu_item" href="#">Главная</a>
-                            <a class="menu_item" href="#">Наши работы</a>
-                            <a class="menu_item" href="#">Акция</a>
-                            <a class="menu_item" href="#">Форматы и цены</a>
-                            <a class="menu_item" href="#">Контакты</a>                        
+                            <a class="menu_item" href="#work">Наши работы</a>
+                            <a class="menu_item" href="#stock">Акция</a>
+                            <a class="menu_item" href="#shop">Форматы и цены</a>
+                            <a class="menu_item" href="#contacts">Контакты</a>                        
                         </div>
                     </div>
                 </div>
@@ -121,7 +126,11 @@
                 <div class="col-md-12">
                     <div class="work_wrap">
                         <img src="img/workfoto.png" alt="Наши работы">
-                        <a class="many_foto" href="#"><img src="img/many_foto.png" alt="Больше фото"></a>
+                        <a data-fancybox="gallery" class="many_foto" href="img/gallary/1.jpg"><img src="img/many_foto.png" alt="Больше фото"></a>
+                        <a data-fancybox="gallery" class="many_foto" href="img/gallary/2.jpg"></a>
+                        <a data-fancybox="gallery" class="many_foto" href="img/gallary/3.jpg"></a>
+                        <a data-fancybox="gallery" class="many_foto" href="img/gallary/4.jpg"></a>
+                        <a data-fancybox="gallery" class="many_foto" href="img/gallary/5.jpg"></a>
                     </div>
                 </div>
             </div>
@@ -192,7 +201,7 @@
                             <ul>
                                 <li class="list"><img class="pin_img" src="img/push-pin.svg" alt="pin">Фоторамку<span class="info_prize"> *</span></li>
                                 <li class="list"><img class="pin_img" src="img/push-pin.svg" alt="pin">Подарочную упаковку</li>
-                                <li class="list"><img class="pin_img" src="img/push-pin.svg" alt="pin">Доставку по Краснодару</li>
+                                <li class="list"><img class="pin_img" src="img/push-pin.svg" alt="pin">Настенное крепление</li>
                             </ul>
                             <strong class="prize_bottom"><img src="img/plus.svg" alt="plus"> БЕСПЛАТНАЯ доставка<br>за Ваш отзыв!</strong>
                             <p class="prize_format"><span class="get_info">* </span>Для форматов: А5, А4, А3, А2, 40*50</p>
@@ -233,6 +242,79 @@
                 </div>
             </div>      
     </section>
+    <!-- feedback section -->
+    <section id="feedback">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-12 section_header text-center">
+                          <h2 class="feedback_header">Отзывы наших клиентов</h2>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="feedback_slider">
+                            <div class="feedback_slider_item text-center">
+                              <div class="feedback_box">
+                                <img class="center-block feedback_img" src="img/feedback/1.jpg" alt="Mike">
+                                
+                              </div>
+                            </div>
+                            <div class="feedback_slider_item text-center">
+                              <div class="feedback_box">
+                                <img class="center-block feedback_img" src="img/feedback/3.png" alt="Mike">
+                                
+                              </div>
+                            </div>
+                            <div class="feedback_slider_item text-center">
+                              <div class="feedback_box">
+                                <img class="center-block feedback_img" src="img/feedback/4.png" alt="Mike">
+                                
+                              </div>
+                            </div>
+                            <div class="feedback_slider_item text-center">
+                              <div class="feedback_box">
+                                <img class="center-block feedback_img" src="img/feedback/5.png" alt="Mike">
+                                
+                              </div>
+                            </div>
+                            <div class="feedback_slider_item text-center">
+                              <div class="feedback_box">
+                                <img class="center-block feedback_img" src="img/feedback/6.png" alt="Mike">
+                                
+                              </div>
+                            </div>
+                            <div class="feedback_slider_item text-center">
+                              <div class="feedback_box">
+                                <img class="center-block feedback_img" src="img/feedback/7.png" alt="Mike">
+                                
+                              </div>
+                            </div>
+                            <div class="feedback_slider_item text-center">
+                              <div class="feedback_box">
+                                <img class="center-block feedback_img" src="img/feedback/8.png" alt="Mike">
+                                
+                              </div>
+                            </div>
+                            <div class="feedback_slider_item text-center">
+                              <div class="feedback_box">
+                                <img class="center-block feedback_img" src="img/feedback/9.png" alt="Mike">
+                                
+                              </div>
+                            </div>                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="feedback_footer_text">
+                                  <p>Ещё больше отзывов можно найти на наших страничках<br>
+                                    социальных сетей в <a href="#"><img class="icon_vk" src="img/vk.svg" alt="vkontakte"></a> и 
+                                    <a href="#"><img class="icon_inst" src="img/instagram.svg" alt="instagram"></a></p>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </section>
 <!-- section shop -->
     <section id="shop">
         <div class="container">
@@ -346,21 +428,26 @@
 <section id="contacts">
     <div class="container">
         <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="contact_header">Наши контакты</h2>
+            </div>
             <div class="col-sm-12 col-md-5 col-lg-6">
-                <div class="contact_block">
-                    <h2 class="contact_header">Наши контакты</h2>
-                        <p class="text_contacts"><img class="icon_contacts" src="img/phone-call.svg" alt="phone">Телефон: +7(902)406-26-25</p>                 
-                    <p class="text_contacts"><img class="icon_contacts" src="img/message.svg" alt="email">Mail: piroprofi@list.ru</p>
+                <div class="wrap_contact_block">
+                    <div class="futter_head_wrap">
+                        <strong class="form_header">Есть вопросы? Позвоните<br>
+                        или напишите, будем рады ответить!</strong>
+                    </div>
+                    <div class="contact_block">
+                            <p class="text_contacts"><img class="icon_contacts" src="img/phone-call.svg" alt="phone">Телефон: +7(902)406-26-25</p>                 
+                        <p class="text_contacts"><img class="icon_contacts" src="img/message.svg" alt="email">Mail: piroprofi@list.ru</p>
+                    </div>
+                    <a href="#"><img class="icon_social_vk" src="img/vk.svg" alt="vkontakte"></a>
+                    <a href="#"><img class="icon_social_inst" src="img/instagram.svg" alt="instagram"></a>
                 </div>
-                <a href="#"><img class="icon_social_vk" src="img/vk.svg" alt="vkontakte"></a>
-                <a href="#"><img class="icon_social_inst" src="img/instagram.svg" alt="instagram"></a>
             </div>
             <div class="col-sm-12 col-md-7 col-lg-6">
-                <div class="futter_head_wrap">
-                    <strong class="form_header">Напишите нам, если у Вас<br>
-                    остались вопросы:</strong>
-                </div>
-                <div class="futter_form float-right">
+                
+                <div class="futter_form">
                     <form action="#">
                         <input type="text" placeholder="Ваше имя" required>
                         <input type="text" placeholder="Телефон" required>
@@ -387,21 +474,12 @@
         </div>
     </div>
 </footer>
-
+<div id="content"></div>
+<div id="top">
+<img class="up_arrow" src="img/up.svg" alt="вверх">
+</div>
 
     
-
-
-
-    
-
-
-
-
-  <!-- header section -->
-<header>
-    
-</header>  
 
 
 
@@ -409,6 +487,51 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <!-- slider slick -->
+    <script src="slick/slick.min.js"></script>
+    <!-- fancybox gallary -->
+    <script src="js/jquery.fancybox.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.feedback_slider').slick({
+         infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: true,
+          prevArrow: '<i class="fa feedback_slider_arrows arrow_left fa-chevron-left"></i>',
+          nextArrow: '<i class="fa feedback_slider_arrows arrow_right fa-chevron-right"></i>',
+          dots: true,
+          responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+        });
+      });
+    </script>
     <script>
   $('.ham').on('click', function(){
   $('.main_menu').toggleClass('open');
@@ -436,6 +559,40 @@
     
   });
   
+});
+    </script>
+    <script type="text/javascript">
+  var top_show = 700; // В каком положении полосы прокрутки начинать показ кнопки "Наверх"
+  var delay = 1000; // Задержка прокрутки
+  $(document).ready(function() {
+    $(window).scroll(function () { // При прокрутке попадаем в эту функцию
+      /* В зависимости от положения полосы прокрукти и значения top_show, скрываем или открываем кнопку "Наверх" */
+      if ($(this).scrollTop() > top_show) $('#top').fadeIn();
+      else $('#top').fadeOut();
+    });
+    $('#top').click(function () { // При клике по кнопке "Наверх" попадаем в эту функцию
+      /* Плавная прокрутка наверх */
+      $('body, html').animate({
+        scrollTop: 0
+      }, delay);
+    });
+  });
+</script>
+    <script>
+        $(document).ready(function(){
+    $("#hide").on("click","a", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+
+        //забираем идентификатор бока с атрибута href
+        var id  = $(this).attr('href'),
+
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+        
+        //анимируем переход на расстояние - top за 1500 мс
+        $('body,html').animate({scrollTop: top}, 1500);
+    });
 });
     </script>
   </body>
