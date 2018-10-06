@@ -46,7 +46,29 @@ h2 {
   cursor: pointer;
 }
 .button:hover {
+  color: #ffffff;
   background-color: #cf6101;
+}
+.button:active {
+  color: #ffffff;
+}
+.button_main {
+  background-color: #fe7f0f;
+  color: #ffffff;
+  padding: 1rem 1rem;
+  border-radius: 6px;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.button_main:hover {
+  background-color: #cf6101;
+  color: #ffffff;
+}
+.button_main:active {
+  color: #ffffff;
 }
 a:hover {
   text-decoration: none;
@@ -116,6 +138,7 @@ main {
   display: inline-block;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
+  text-decoration: none;
   font-size: 2rem;
   color: #ffffff;
   display: -webkit-flex;
@@ -127,6 +150,12 @@ main {
   align-items: center;
   height: 9rem;
   line-height: 9rem;
+}
+.phone_link:hover {
+  color: #ffffff;
+}
+.phone_link:active {
+  color: #ffffff;
 }
 .main_content {
   background-color: rgba(189, 103, 37, 0.8);
@@ -832,6 +861,155 @@ section#video {
   border-radius: 50%;
   border: 1px #fcd270 solid;
 }
+/* modal windows */
+#modal_form {
+  width: 300px;
+  height: 300px;
+  /* Рaзмеры дoлжны быть фиксирoвaны */
+  border-radius: 10px;
+  border: 3px #000 solid;
+  background: #fe9a42;
+  position: fixed;
+  /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+  top: 45%;
+  /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+  left: 50%;
+  /* пoлoвинa экрaнa слевa */
+  margin-top: -150px;
+  margin-left: -150px;
+  /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+  display: none;
+  /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+  opacity: 0;
+  /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 5;
+  /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 20px 10px;
+}
+#modal_form_portret {
+  width: 330px;
+  height: 620px;
+  /* Рaзмеры дoлжны быть фиксирoвaны */
+  border-radius: 10px;
+  border: 3px #000 solid;
+  background: #fcd270;
+  position: fixed;
+  /* чтoбы oкнo былo в видимoй зoне в любoм месте */
+  top: 45%;
+  /* oтступaем сверху 45%, oстaльные 5% пoдвинет скрипт */
+  left: 50%;
+  /* пoлoвинa экрaнa слевa */
+  margin-top: -300px;
+  margin-left: -150px;
+  /* тут вся мaгия центрoвки css, oтступaем влевo и вверх минус пoлoвину ширины и высoты сooтветственнo =) */
+  display: none;
+  /* в oбычнoм сoстoянии oкнa не дoлжнo быть */
+  opacity: 0;
+  /* пoлнoстью прoзрaчнo для aнимирoвaния */
+  z-index: 5;
+  /* oкнo дoлжнo быть нaибoлее бoльшем слoе */
+  padding: 20px 10px;
+}
+/* Кнoпкa зaкрыть для тех ктo в тaнке) */
+#modal_form #modal_close {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  cursor: pointer;
+  display: block;
+  font-size: 1.5rem;
+}
+#modal_form_portret #modal_close_portret {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  cursor: pointer;
+  display: block;
+  font-size: 1.5rem;
+}
+/* Пoдлoжкa */
+#overlay {
+  z-index: 3;
+  /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+  position: fixed;
+  /* всегдa перекрывaет весь сaйт */
+  background-color: #000;
+  /* чернaя */
+  opacity: 0.8;
+  /* нo немнoгo прoзрaчнa */
+  -moz-opacity: 0.8;
+  /* фикс прозрачности для старых браузеров */
+  filter: alpha(opacity=80);
+  width: 100%;
+  height: 100%;
+  /* рaзмерoм вo весь экрaн */
+  top: 0;
+  /* сверху и слевa 0, oбязaтельные свoйствa! */
+  left: 0;
+  cursor: pointer;
+  display: none;
+  /* в oбычнoм сoстoянии её нет) */
+}
+#overlay_portret {
+  z-index: 3;
+  /* пoдлoжкa дoлжнa быть выше слoев элементoв сaйтa, нo ниже слoя мoдaльнoгo oкнa */
+  position: fixed;
+  /* всегдa перекрывaет весь сaйт */
+  background-color: #000;
+  /* чернaя */
+  opacity: 0.8;
+  /* нo немнoгo прoзрaчнa */
+  -moz-opacity: 0.8;
+  /* фикс прозрачности для старых браузеров */
+  filter: alpha(opacity=80);
+  width: 100%;
+  height: 100%;
+  /* рaзмерoм вo весь экрaн */
+  top: 0;
+  /* сверху и слевa 0, oбязaтельные свoйствa! */
+  left: 0;
+  cursor: pointer;
+  display: none;
+  /* в oбычнoм сoстoянии её нет) */
+}
+.callback input {
+  width: 100%;
+  height: 3rem;
+  margin-top: 15px;
+  padding-left: 30px;
+  font-size: 1.3rem;
+}
+.callback .main_btn {
+  width: 100%;
+  height: 3rem;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #fcd270;
+  border-radius: 3px;
+  font-size: 1.3rem;
+}
+.box_callback p {
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: #000000;
+}
+.head_services {
+  margin-top: 5%;
+  margin-bottom: 3%;
+  text-align: center;
+  font-size: 24px;
+  color: #ffffff;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+/* end modal */
 @media (max-width: 575.98px) {
   .main_menu {
     position: relative;
