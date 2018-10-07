@@ -240,7 +240,7 @@
                                     <label for="">Загрузите фото:</label>
                                     <div class="file-upload"> 
                                     <label><input type="file" id="" name="upload">
-                                        <span>Выберите файл...</span>
+                                        <span class="add_file" >Выберите файл...</span>
                                     </label>
                                 </div>
                                 <button class="button_main" type="submit">Заказать портрет</button>
@@ -562,7 +562,7 @@
 
 <div id="modal_form_portret" class="main_form">
     <span id="modal_close_portret">X</span> <!-- Кнoпкa зaкрыть -->
-                            <div class="main_form_header">
+                            <div class="modal_form_header">
                                 <strong>Загрузите фото или картинку
                                 <br>и мы вышлем Вам макет
                                 <br>БЕСПЛАТНО!</strong>
@@ -578,7 +578,7 @@
                                     <label for="">Загрузите фото:</label>
                                     <div class="file-upload"> 
                                     <label><input type="file" id="" name="upload2">
-                                        <span>Выберите файл...</span>
+                                        <span class="add_file" >Выберите файл...</span>
                                     </label>
                                                                     </div>
                                 <button class="button_main" type="submit">Заказать портрет</button>
@@ -783,6 +783,12 @@
         //анимируем переход на расстояние - top за 1500 мс
         $('body,html').animate({scrollTop: top}, 1500);
     });
+});
+    </script>
+    <script>
+        $('form input[type=file]').on('change', function() {
+    var value = $('form input[type=file]').val();
+    $(".add_file").text("Файл загружен, спасибо!")
 });
     </script>
   </body>
