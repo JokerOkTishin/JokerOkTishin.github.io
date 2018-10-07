@@ -4,9 +4,9 @@ require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
 $mail->CharSet = 'utf-8';
 
-$name = $_POST['user_name'];
-$phone = $_POST['user_phone'];
-$email = $_POST['user_email'];
+$name = $_POST['user_name2'];
+$phone = $_POST['user_phone2'];
+$email = $_POST['user_email2'];
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
@@ -25,7 +25,7 @@ $mail->addAddress('jokertrade1@gmail.com');     // Кому будет уход�
 //$mail->addCC('cc@example.com');
 //$mail->addBCC('bcc@example.com');
 //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
-$mail->addAttachment($_FILES['upload']['tmp_name'], $_FILES['upload']['name']);    // Optional name
+$mail->addAttachment($_FILES['upload2']['tmp_name'], $_FILES['upload2']['name']);    // Optional name
 $mail->isHTML(true);                                  // Set email format to HTML
 
 $mail->Subject = 'Заказ портрета';

@@ -168,6 +168,12 @@ main {
 	background-size: cover;
 	height: 80rem;
 }
+.main_mobile {
+	background: #000 url(../img/maingb.jpg) no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 100rem;
+}
 .wrap {
 	display: table;
 	width: 100%;
@@ -236,7 +242,23 @@ transition: all 0.4s;
 	transform: scale(1.2);
 }
 }
-
+.many_foto_mobile {
+bottom: 0;
+right: 0;
+margin-bottom: 3.6rem;
+--webkit-transition: all 0.4s;
+-o-transition: all 0.4s;
+transition: all 0.4s;
+&:hover {
+	--webkit-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+}
+}
+.mobile_work {
+	display: none;
+}
 /* section step */
 
 #step {
@@ -1088,6 +1110,16 @@ section#video {
 .work_wrap {
 	display: none;
 }
+.mobile_work {
+	display: block;
+	img {
+		width: 80%;
+		height: 80%;
+	}
+	h2 {
+		color: @text;
+	}
+}
 .main_header {
 	margin-top: 10rem;
 	font-size: 2rem;
@@ -1138,6 +1170,18 @@ section#stock {
 .footer_cit {
 	font-size: 1.2rem;
 }
+.mobil_icon {
+
+	img {
+		width: 8%;
+	height: 8%;
+	}
+}
+.wrap_block {
+	a {
+		font-size: 1.2rem;
+	}
+}
 }
 
 // Малые девайсы («ландшафтные», < 768px)
@@ -1147,6 +1191,12 @@ section#stock {
 }
 .work_wrap {
 	display: none;
+}
+.mobile_work {
+	display: block;
+	h2 {
+		color: @text;
+	}
 }
 .main_header {
 	margin-top: 16rem;
@@ -1217,6 +1267,9 @@ section#stock {
 	font-size: 1.5rem;
 }
 .wrap_contact_block {
+	margin: 0;
+}
+.stock_header {
 	margin: 0;
 }
 }
